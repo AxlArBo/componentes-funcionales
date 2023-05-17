@@ -1,13 +1,13 @@
 import './App.css';
-import ClassComponent from './components/ClassComponent';
-import FuncComponent from './components/FuncComponent';
+import FormSigUp from './components/FormSignUp';
+import { Container, Typography } from '@mui/material';
 
 function App() {
   return (
-    <div>
-      <ClassComponent />
-      <FuncComponent />
-    </div>
+    <Container component={"section"} maxWidth="sm">
+      <Typography variant='h3' align='center' component={'h1'}>Formulario registro</Typography>
+      <FormSigUp />
+    </Container>
   );
 }
 
