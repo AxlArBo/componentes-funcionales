@@ -1,7 +1,14 @@
 import { Button, TextField, Switch, FormGroup, FormControlLabel } from "@mui/material"
+import { useState, useEffect } from "react";
 
 
 function FormSigUp() {
+    const [name, setName] = useState('');
+    
+    useEffect(() => {
+        console.log('Name cambio: ', name)
+    }, [name])
+
     return (
         <form>
             <TextField 
@@ -10,6 +17,11 @@ function FormSigUp() {
                 variant="outlined" 
                 fullWidth
                 margin="normal"
+                onChange={ (e) => {
+                    console.log(e.target.value);
+                    setName(e.target.value)
+                }}
+                value={ name }
             />
             <TextField 
                 id="lastname" 
